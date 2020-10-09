@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript</title>
+    <style>
+        #div_01 {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            background-color: #f00;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+    <script>
+        // addEventListener
+        function mensagem() {
+            alert("CFB Cursos")
+        }
+        
+        /*
+        function muda_cor(){
+            var objeto = document.getElementById("div_01")
+            objeto.style.backgroundColor = "#aaa"
+        }
+
+        function muda_cor_saida() {
+            var objeto = document.getElementById("div_01")
+                objeto.style.backgroundColor = "#f00"
+        }
+        */
+
+        // Função anônima para mudança de cor
+        function cor(objeto, cor){
+            objeto.style.backgroundColor = cor
+        }
+
+        function add_eventos() {
+            var objeto = document.getElementById("div_01")
+            objeto.addEventListener("click", mensagem)
+            objeto.addEventListener("mouseover", function(event){
+                cor(objeto, "#fff")
+            })
+            objeto.addEventListener("mouseout", function(event){
+                cor(objeto, "#f00")
+            })
+        //    objeto.addEventListener("mouseover", muda_cor)
+        //    objeto.addEventListener("mouseout", muda_cor_saida)
+        }
+        window.addEventListener("load", add_eventos)
+    </script>
+</head>
+<body>
+    <!-- <div id="div_01" onclick="mensagem()"></div> -->
+    <div id="div_01"></div>
+</body>
+</html>
