@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript</title>
+    <style>
+        #carro {
+            width: 200px;
+            height: 379px;
+        }
+
+        .c1 {background-image: url(imagens/carro01.jpg);}
+        .c2 {background-image: url(imagens/carro02.jpg);}
+        .c3 {background-image: url(imagens/carro03.png);}
+    </style>
+    <script>
+        // Manipulando atributos HTML por JavaScript
+        // setAtribute, removeAtribute e hasAtribute
+        // setAtribute vai setar um atributo
+        // removeAtribute vai remover um atributo
+        // hasAtribute vai verificar se já existe um atributo
+
+        function troca_carro(carro) {
+            var objeto = document.getElementById("carro")
+            if (carro == 1) {
+                objeto.setAttribute("class", "c1")
+            }else if (carro == 2) {
+                objeto.setAttribute("class", "c2")
+            }else if (carro == 3) {
+                objeto.setAttribute("class", "c3")
+            }
+        }
+
+        function remover_carro() {
+            var objeto = document.getElementById("carro")
+            objeto.removeAttribute("class")
+        }
+
+        function verficar() {
+            var objeto = document.getElementById("carro")
+            if (objeto.hasAttribute("class")) {
+                alert("Atributo Class está atribuído no botão")
+            } else {
+                alert("Atributo Class não está atribuído no botão")
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="troca_carro(1)">Carro 01</button>
+    <button onclick="troca_carro(2)">Carro 02</button>
+    <button onclick="troca_carro(3)">Carro 03</button>
+    <button onclick="remover_carro()">Remover Carro</button>
+    <button onclick="verficar()">Verificar</button>
+    <div id="carro"></div>
+</body>
+</html>
