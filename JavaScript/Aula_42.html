@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript</title>
+    <style>
+        #div_slider {
+            width: 1000px;
+            height: 600px;
+            border: none;
+            display: flex;
+            padding: 0px;
+            margin: 0px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .botao_troca {
+            background-color: rgba(0, 0, 0, 0.4);
+            height: 30%;
+            color: #fff;
+            cursor: pointer;
+            outline: none;
+            margin: 10px;
+            border: none;
+        }
+
+        #borda{
+            width: 100%;
+            height: 5px;
+            margin-top: 589px;
+            border: 1px solid rgba(255, 255, 255, 0.3)
+        }
+
+        #carregamento {
+            width: 0%;
+            height: 100%;
+            background-color: #fff;
+        }
+
+    </style>
+    <script>
+        // Slider em JavaScript
+
+        var imagens = []
+        var slider
+        var imagem_atual
+        var maximo_imagens
+        var tempo
+        var tempo_troca
+        var load_tempo
+        var load_barra
+
+        function pre_carregamento(){
+            var s = 1
+            for (var indice = 0; indice < 5; indice++){
+                imagens[indice] = new Image()
+                imagens[indice].src = "imagens/s"+ s +".jpg"
+                s++
+            }
+        }
+
+        function carregar_imagens(imagem){
+            slider.style.backgroundImage = "url('"+ imagens[imagem].src+"')"
+        }
+
+        function iniciar(){
+            pre_carregamento();
+            imagem_atual = 0
+            maximo_imagens = imagens.length - 1
+            slider = document.getElementById("div_slider")
+            load_barra = document.getElementById("carregamento")
+            carregar_imagens(imagem_atual)
+            tempo_troca = 0
+            animacao()
+        }
+
+        function troca(direcao){
+            tempo_troca = 0
+            imagem_atual -= direcao 
+            if (imagem_atual > maximo_imagens){
+                imagem_atual = 0
+            }else if (imagem_atual < 0) {
+                imagem_atual = maximo_imagens
+            }
+            carregar_imagens(imagem_atual)
+        }
+
+        function animacao(){
+            tempo_troca++
+            if (tempo_troca >= 500) {
+                tempo_troca = 0
+                troca(1)
+            }
+            load_tempo = tempo_troca / 5
+            load_barra.style.width = load_tempo + "%" 
+            window.requestAnimationFrame(animacao)
+        }
+
+        window.addEventListener("load", iniciar)
+    </script>
+</head>
+<body>
+    <div id="div_slider">
+        <button class="botao_troca" onclick="troca(-1)"><</button>
+        <div id="borda">
+            <div id="carregamento"></div>
+        </div>
+        <button class="botao_troca" onclick="troca(1)">></button>
+    </div>
+</body>
+</html>
