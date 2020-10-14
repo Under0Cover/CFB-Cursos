@@ -1,0 +1,8 @@
+#carro {
+    width: 200px;
+    height: 379px;
+}
+
+.c1 {background-image: url(imagens/carro01.jpg);}
+.c2 {background-image: url(imagens/carro02.jpg);}
+.c3 {background-image: url(imagens/carro03.png);}
