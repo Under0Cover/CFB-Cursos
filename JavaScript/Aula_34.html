@@ -4,89 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso de JavaScript</title>
-    <style>
-        #div_01{
-            width: 100px;
-            height: 100px;
-            border: 1px solid #000;
-            background-color: #fff;
-            position: absolute;
-            left: 0px;
-            top: 0px;
-        }
-    </style>
-    <script>
-        // addEventListener
-        var px = 0
-        // Eixo X
-        var py = 0
-        // Eixo y
-
-        var objeto
-
-        /*
-        document.addEventListener("keydown", function(event){
-            var objeto = document.getElementById("div_01")
-            var tecla = event.keyCode
-            // 37 - Esquerda
-            // 38 - Cima
-            // 39 - Direita
-            // 40 - Baixo
-            if (tecla == 37) {
-                px -= 10
-                objeto.style.left = px + "px"
-            }else if (tecla == 38) {
-                py -= 10
-                objeto.style.top = py + "px"
-            }else if (tecla == 39) {
-                px += 10
-                objeto.style.left = px + "px"
-            }else if (tecla == 40) {
-                py += 10
-                objeto.style.top = py + "px"
-            }
-        })
-        */
-
-        // Também pode ser feito assim:
-        
-        function move(){
-            
-            var tecla = event.keyCode
-            if (tecla == 37) {
-                px -= 10
-                objeto.style.left = px + "px"
-            }else if (tecla == 38) {
-                py -= 10
-                objeto.style.top = py + "px"
-            }else if (tecla == 39) {
-                px += 10
-                objeto.style.left = px + "px"
-            }else if (tecla == 40) {
-                py += 10
-                objeto.style.top = py + "px"
-            }else if (tecla == 13) { /* Tecla 13 é Enter */
-                alert("Evento keydown Removido")
-                document.removeEventListener("keydown", move)
-                objeto.style.backgroundColor = "#fff"
-            }
-        }
-
-        function addClique(){
-            alert("Evento keydown Ativado")
-            document.addEventListener("keydown", move)
-            objeto.style.backgroundColor = "#f00"
-        }
-
-        function iniciar(){
-            objeto = document.getElementById("div_01")
-            objeto.addEventListener("click", addClique)
-        }
-
-        window.addEventListener("load", iniciar)
-    </script>
+    <link rel="stylesheet" href="css/Aula_34.css">
 </head>
 <body>
     <div id="div_01"></div>
+    <script src="js/Aula_34.js"></script>
 </body>
 </html>
