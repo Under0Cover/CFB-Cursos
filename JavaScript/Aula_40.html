@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso de JavaScript</title>
-    <style>
-        table{border-collapse: collapse;}
-        table, td, tr, th {border: 1px solid #000;}
-    </style>
+    <link rel="stylesheet" href="css/Aula_40.css">
 </head>
 <body>
     <div id="titulo">
@@ -61,31 +58,7 @@
                 <th id="resultado_05"></th>
             </tr>
         </table>
-        <script>
-            var tabela = document.getElementById("tabela_notas")
-            var resultado_notas = []
-            var indice
-            var soma_notas
-
-            for (indice = 1; indice < tabela.rows.length; indice++) {
-                soma_notas = parseFloat(tabela.rows[indice].cells[1].innerHTML) + parseFloat(tabela.rows[indice].cells[2].innerHTML) + parseFloat(tabela.rows[indice].cells[3].innerHTML) + parseFloat(tabela.rows[indice].cells[4].innerHTML)
-                tabela.rows[indice].cells[5].innerHTML = soma_notas
-            }
-
-            resultado_notas[0] = document.getElementById("resultado_01")
-            resultado_notas[1] = document.getElementById("resultado_02")
-            resultado_notas[2] = document.getElementById("resultado_03")
-            resultado_notas[3] = document.getElementById("resultado_04")
-            resultado_notas[4] = document.getElementById("resultado_05")
-
-            for (indice = 0; indice < 5; indice++) {
-                if (resultado_notas[indice].innerHTML < 70){
-                    resultado_notas[indice].style.color = "#f00"
-                } else {
-                    resultado_notas[indice].style.color = "#00f"
-                }
-            }
-        </script>
     </div>
+    <script src="js/Aula_40.js"></script>
 </body>
 </html>
