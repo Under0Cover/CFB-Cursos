@@ -4,44 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso de JavaScript</title>
-    <style>
-        #div1{
-            width: 200px;
-            height: 200px;
-            border: 1px solid #000;
-        }
-    </style>
-    <script>
-        // Eventos em JavaScript
-        function muda_cor(objeto, cor) {
-            objeto.style.backgroundColor = cor
-        }
-
-        function muda_posicao(objeto) {
-            objeto.style.position = "absolute"
-            objeto.style.left = Math.random()*500 + "px"
-            objeto.style.top = Math.random()*500 + "px"
-        }
-
-        function saudacao() {
-            var data = new Date()
-            var hora = data.getHours()
-            var texto = ""
-            if (hora < 12 ) {
-                texto = "Bom dia!"
-            } else if (hora < 18) {
-                texto = "Boa tarde!"
-            } else {
-                texto = "Boa noite!"
-            }
-            alert("Olá, " + texto)
-        }
-    </script>
+    <link rel="stylesheet" href="css/Aula_32.css">
 </head>
 <body onload="saudacao()">
     <div id="div1" onmouseover="muda_cor(this, '#f00')" onmouseout="muda_cor(this, '#fff')"></div>    
     <br>
     <button onmouseover="muda_cor(document.getElementById('div1'), '#00f')" onmouseout="muda_cor(document.getElementById('div1'), '#fff')">Passe o mouse aqui!</button>
     <button onclick="alert('Finalmente!!!')" onmouseover="muda_posicao(this)">Cliquem em mim!</button>
+    <script src="js/Aula_32.js"></script>
 </body>
 </html>
