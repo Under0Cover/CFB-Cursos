@@ -4,24 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso de JavaScript</title>
-    <style>
-        .titulo{
-            color: #f00;
-            font-size: 20px;
-            text-decoration: underline;
-        }
-        div{
-            border: 1px solid #000;
-            padding: 10px;
-            display: inline-block;
-        }
-        a{
-            display: block;
-        }
-        .quadro{
-            background-color: #ddd;
-        }
-    </style>
+    <link rel="stylesheet" href="css/Aula_26.css">
 </head>
 <body>
     <h1 class="titulo">querySelectorAll</h1>
@@ -42,49 +25,6 @@
     <a href="http://www.youtube.comcfbcursos" target="_blank">Canal</a>
     <a href="http://cfbcursos.com.br">Site</a>
     <hr>
-    <script>
-        // querySelectorAll
-        var ps = document.querySelectorAll("p")
-        document.write(ps[0].innerHTML)
-        ps[0].innerHTML = "Novo texto"
-        ps[0].style.color = "#00f"
-
-        document.write("<br>")
-        document.write("<hr>")
-        document.write("<br>")
-        
-        var elementos = document.querySelectorAll(".titulo")
-        for (var indice = 0; indice < elementos.length; indice++){
-            document.write(elementos[indice].innerHTML + "<br>")
-        }
-
-        document.write("<br>")
-        document.write("<hr>")
-        document.write("<br>")
-
-        var exemplo = document.querySelectorAll("p.titulo")
-        for (var indice = 0; indice < exemplo.length; indice++){
-            document.write(exemplo[indice].innerHTML + "<br>")
-        }
-
-        document.write("<br>")
-        document.write("<hr>")
-        document.write("<br>")
-
-        var p_div = document.querySelectorAll("div > p")
-        for (var indice = 0; indice < p_div.length; indice++){
-            document.write(p_div[indice].innerHTML + "<br>")
-            p_div[indice].style.color = "#0a0"
-        }
-
-        document.write("<br>")
-        document.write("<hr>")
-        document.write("<br>")
-
-        var quadro = document.querySelectorAll("div.quadro > *")
-        for (var indice = 0; indice < quadro.length; indice++){
-            quadro[indice].style.color = "#a0a"
-        }
-    </script>
+    <script src="js/Aula_26.js"></script>
 </body>
 </html>
