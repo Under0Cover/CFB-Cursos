@@ -4,57 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso de JavaScript</title>
-    <style>
-        #div_01{
-            width: 1000px;
-            height: 1000px;
-            border: 1px solid #000;
-            background-color: #fff;
-        }
-    </style>
-    <script>
-        // setTimeout e setInterval
-
-        var tempo
-
-        function muda_cor() {
-            var objeto = document.getElementById("div_01")
-            var r = Math.floor(Math.random()*255)
-            var g = Math.floor(Math.random()*255)
-            var b = Math.floor(Math.random()*255)
-            objeto.style.backgroundColor = "rgb("+r+","+g+","+b+")"
-        }
-
-        // var tempo = setInterval(muda_cor, 3000)
-        // Contantemente troca de cores
-
-        // var tempo = setTimeout(muda_cor, 3000)
-        // Muda a cor da div apenas uma vez
-
-        // window.addEventListener("load", muda_cor)
-        // Sempre que a página é carregada, muda a cor
-
-        function iniciar() {
-            tempo = setInterval(muda_cor, 50)
-        }
-
-        function parar() {
-            clearInterval(tempo)
-            // Para a variável "tempo" funcional, temos que declarar ela no escopo global, porque dentro da função ela não irá ser encontrada
-        }
-
-        function addEventos() {
-            document.getElementById("botao_01").addEventListener("click", iniciar)
-            document.getElementById("botao_02").addEventListener("click", parar)
-        }
-
-        window.addEventListener("load", addEventos)
-    </script>
+    <link rel="stylesheet" href="css/Aula_35.css">
 </head>
 <body>
     <div id="div_01"></div>
     <br>
     <button id="botao_01">Iniciar</button>
     <button id="botao_02">Parar</button>
+    <script src="js/Aula_35.js"></script>
 </body>
 </html>
