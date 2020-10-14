@@ -4,76 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso de JavaScript</title>
-    <style>
-        #div_01 {
-            width: 100px;
-            height: 100px;
-            border: 1px solid #000;
-            background-color: #f00;
-            position: absolute;
-            left: 0px;
-            top: 0px;
-        }
-    </style>
-    <script>
-        // Movendo objeto 
-        var direcaoX
-        var direcaoY
-        var posicionamentoX
-        var posicionamentoY
-        var velocidade
-        var objeto
-        var tempo
-
-        function iniciar() {
-            direcaoX = 0
-            direcaoY = 0
-            posicionamentoX = 0
-            posicionamentoY = 0
-            velocidade = 10
-            objeto = document.getElementById("div_01")
-            tempo = setInterval(enter_frame, 20)
-            document.addEventListener("keydown", tecla_pressionada)
-            document.addEventListener("keyup", tecla_solta)
-        }
-
-        function tecla_pressionada() {
-            var tecla = event.keyCode
-            if (tecla == 37) {
-                direcaoX = -1
-            }else if (tecla == 38) {
-                direcaoY = -1
-            }else if (tecla == 39) {
-                direcaoX = 1
-            }else if (tecla == 40) {
-                direcaoY = 1
-            }
-        }
-
-        function tecla_solta() {
-            var tecla = event.keyCode
-            if (tecla == 37) {
-                direcaoX = 0
-            }else if (tecla == 38) {
-                direcaoY = 0
-            }else if (tecla == 39) {
-                direcaoX = 0
-            }else if (tecla == 40) {
-                direcaoY = 0
-            }
-        }
-
-        function enter_frame() {
-            posicionamentoX += direcaoX * velocidade
-            posicionamentoY += direcaoY * velocidade
-            objeto.style.left = posicionamentoX + "px"
-            objeto.style.top = posicionamentoY + "px"
-        }
-
-        window.addEventListener("load", iniciar)
-    </script>
+    <link rel="stylesheet" href="css/Aula_36.css">
 </head>
 <body>
     <div id="div_01"></div>
+    <script src="js/Aula_36.js"></script>
 </body>
 </html>
