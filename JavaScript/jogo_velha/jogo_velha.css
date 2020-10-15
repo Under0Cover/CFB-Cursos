@@ -1,0 +1,66 @@
+.posicao_campo {
+    width: 50px;
+    height: 50px;
+    margin: 0px;
+    padding: 0px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+}
+
+#tabuleiro {
+    width: 160px;
+    height: 160px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start ;
+    margin: 15px;
+    padding: 15px;
+    background-color: #eee;
+}
+
+#quem_comeca {
+    margin: 10px;
+}
+
+#menu button {
+    margin: 15px;
+}
+
+#posicao_01 {
+    border-right: 3px solid #000;
+    border-bottom: 3px solid #000;
+}
+
+#posicao_02 {
+    border-bottom: 3px solid #000;
+    border-right: 3px solid #000;
+}
+
+#posicao_03 {
+    border-bottom: 3px solid #000;
+}
+
+#posicao_04 {
+    border-bottom: 3px solid #000;
+    border-right: 3px solid #000;
+}
+
+#posicao_05 {
+    border-bottom: 3px solid #000;
+}
+
+#posicao_06 {
+    border-bottom: 3px solid #000;
+    border-left: 3px solid #000;
+}
+
+#posicao_07 {
+    border-right: 3px solid #000;
+}
+
+#posicao_08 {
+    border-right: 3px solid #000;
+}
