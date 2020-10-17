@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Ping Pong</title>
+    <link rel="stylesheet" href="ping_pong.css">
+</head>
+<body>
+    <div id="div_jogo">
+        <div id="div_bola"></div>
+        <div id="div_jogador" class="barra esquerda"></div>
+        <div id="div_cpu" class="barra direita"></div>
+    </div>
+    <div id="div_painel">
+        <div class="item_painel">
+            <label>Pontos</label>
+            <input type="text" value="0" size="10" id="texto_pontos">
+        </div>
+        <div class="item_painel">
+            <button id="botao_iniciar" onclick="iniciar_jogo">Iniciar</button>
+        </div>
+    </div>
+    <script src="ping_pong.js"></script>
+</body>
+</html>
