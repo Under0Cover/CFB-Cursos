@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript</title>
+    <link rel="stylesheet" href="css/Aula_57.css">
+</head>
+<body>
+    <h1>Curso de JavaScript</h1>
+    <p>LocalStorage</p>
+    <button onclick="configuracoes()">Configurações</button>
+    <p id="painel"></p>
+    <form name="dados" id="configuracoes_formulario">
+        <label>Nome:</label><br>
+        <input type="text" name="formulario_nome" id="formulario_nome" size="20"><br><br>
+        <label>Cor fundo:</label><br>
+        <input type="radio" name="formulario_cor_fundo" onclick="define_cor(1, '#00f')">Azul<br>
+        <input type="radio" name="formulario_cor_fundo" onclick="define_cor(1, '#fff')">Branco<br>
+        <input type="radio" name="formulario_cor_fundo" onclick="define_cor(1,'#000')">Preto<br>
+        <input type="radio" name="formulario_cor_fundo" onclick="define_cor(1,'#0f0')">Verde<br>
+        <input type="radio" name="formulario_cor_fundo" onclick="define_cor(1, '#f00')">Vermelho<br><br>
+        <label>Cor texto:</label><br>
+        <input type="radio" name="formulario_cor_texto" onclick="define_cor(2, '#fff')">Branco<br>
+        <input type="radio" name="formulario_cor_texto" onclick="define_cor(2, '#000')">Preto<br><br>
+        <input type="button" value="Gravar" onclick="gravar()">
+    </form>
+    <script src="js/Aula_57_formulario.js"></script>
+    <script src="js/Aula_57.js"></script>
+    <script src="js/Contador_Visitas.js"></script>
+</body>
+</html>
