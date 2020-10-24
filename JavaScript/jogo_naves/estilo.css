@@ -1,0 +1,62 @@
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: #888;
+}
+
+.nave_jogador {
+    width: 40px;
+    height: 40px;
+    background-image: url("arquivos/nave_jog.gif");
+    position: absolute;
+}
+
+.tela_mensagem {
+    position: absolute;
+    margin-left: -25%;
+    top: 50px;
+    left: 50%;
+    width: 720px;
+    height: 621px;
+    display: none;
+}
+
+#medidor_planeta {
+    border: 2px solid #000;
+    width: 300px;
+    height: 20px;
+    background-color: #fff;
+}
+
+#barra_planeta {
+    width: 300px;
+    height: 20px;
+    background-color: #55f;
+}
+
+.tiro_disparado {
+    width: 6px;
+    height: 6px;
+    background-color: #000;
+    border-radius: 6px;
+    position: absolute;
+}
+
+.bomba {
+    width: 24px;
+    height: 40px;
+    background-image: url("arquivos/bomba.gif");
+    position: absolute;
+}
+
+.explosaochao {
+    width: 55px;
+    height: 57px;
+    position: absolute;
+}
+
+.explosaoar {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+}
