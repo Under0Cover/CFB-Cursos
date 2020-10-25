@@ -1,0 +1,8 @@
+.div {
+    cursor: pointer;
+    width: 150px;
+    height: 303px;
+    background-size: 150px 303px;
+    background-image: url('../imagens/c1.png');
+    display: inline-block;
+}
